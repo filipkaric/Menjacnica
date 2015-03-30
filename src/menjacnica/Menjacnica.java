@@ -19,7 +19,7 @@ public class Menjacnica implements MenjacnicaInterfejs {
 		kurs.setKupovniKurs(kupovniKurs);
 		kurs.setProdajniKurs(prodajniKurs);
 		kurs.setSrednjiKurs(srednjiKurs);
-}
+	}
 
 	public Kurs obrisiKurs(GregorianCalendar datum) {
 		for (int i = 0; i < kursevi.size(); i++) {

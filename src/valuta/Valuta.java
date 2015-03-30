@@ -5,34 +5,40 @@ import java.util.LinkedList;
 import kurs.Kurs;
 
 public class Valuta {
-	
+
 	private String naziv, skraceniNaziv;
 	private LinkedList<Kurs> kursevi;
-	
+
 	public String getNaziv() {
 		return naziv;
 	}
+
 	public void setNaziv(String naziv) {
-		if(naziv == null || naziv.isEmpty()){
+		if (naziv == null || naziv.isEmpty()) {
 			throw new RuntimeException("Molim vas, unesite naziv.");
 		}
 		this.naziv = naziv;
 	}
+
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
+
 	public void setSkraceniNaziv(String skraceniNaziv) {
-		if(skraceniNaziv == null || skraceniNaziv.isEmpty()){
+		if (skraceniNaziv == null || skraceniNaziv.isEmpty()) {
 			throw new RuntimeException("Molim vas, unesite skraceni naziv.");
 		}
 		this.skraceniNaziv = skraceniNaziv;
 	}
+
 	public LinkedList<Kurs> getKursevi() {
 		return kursevi;
 	}
+
 	public void setKursevi(LinkedList<Kurs> kursevi) {
 		this.kursevi = kursevi;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -43,6 +49,7 @@ public class Valuta {
 				+ ((skraceniNaziv == null) ? 0 : skraceniNaziv.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -69,12 +76,11 @@ public class Valuta {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "Valuta [naziv=" + naziv + ", skraceniNaziv=" + skraceniNaziv
 				+ ", kursevi=" + kursevi + "]";
 	}
-	
-	
 
 }

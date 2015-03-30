@@ -5,43 +5,51 @@ import java.util.GregorianCalendar;
 public class Kurs {
 	private double prodajniKurs, srednjiKurs, kupovniKurs;
 	private GregorianCalendar datum;
-	
+
 	public double getProdajniKurs() {
 		return prodajniKurs;
 	}
+
 	public void setProdajniKurs(double prodajniKurs) {
-		if(prodajniKurs <= 0){
+		if (prodajniKurs <= 0) {
 			throw new RuntimeException("Prodajni kurs mora biti veci od nule.");
 		}
 		this.prodajniKurs = prodajniKurs;
 	}
+
 	public double getSrednjiKurs() {
 		return srednjiKurs;
 	}
+
 	public void setSrednjiKurs(double srednjiKurs) {
-		if(srednjiKurs <= 0){
+		if (srednjiKurs <= 0) {
 			throw new RuntimeException("Srednji kurs mora biti veci od nule.");
 		}
 		this.srednjiKurs = srednjiKurs;
 	}
+
 	public double getKupovniKurs() {
 		return kupovniKurs;
 	}
+
 	public void setKupovniKurs(double kupovniKurs) {
-		if(kupovniKurs <= 0){
+		if (kupovniKurs <= 0) {
 			throw new RuntimeException("Kupovni kurs mora biti veci od nule.");
 		}
 		this.kupovniKurs = kupovniKurs;
 	}
+
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
+
 	public void setDatum(GregorianCalendar datum) {
-		if(datum == null){
+		if (datum == null) {
 			throw new RuntimeException("Datum ne sme biti null.");
 		}
 		this.datum = datum;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -56,6 +64,7 @@ public class Kurs {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -81,12 +90,12 @@ public class Kurs {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "Kurs [prodajniKurs=" + prodajniKurs + ", srednjiKurs="
 				+ srednjiKurs + ", kupovniKurs=" + kupovniKurs + ", datum="
 				+ datum + "]";
 	}
-	
-	
+
 }
